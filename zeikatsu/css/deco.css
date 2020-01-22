@@ -1,0 +1,75 @@
+body {
+  text-align: center;
+  width: 600px;
+  margin: 60px auto;
+  padding: 70px;
+  border: 1px solid #d3cce3;
+  background-color: #fdeff9;
+}
+ p {
+   font-family: serif;
+   font-size: 16px;
+ }
+#form1 {
+
+}
+.login {
+  font-size: 30px;
+  text-align: center;
+  border-bottom: 1px solid black;
+}
+
+.error {
+  font-size: 20px;
+  text-align: center;
+  border-top: 20px;
+}
+
+.user {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.pass {
+  font-size: 20px;
+margin-bottom: 10px;
+}
+
+.pass2 {
+  font-size: 20px;
+  margin-right: 60px;
+}
+
+.formuser {
+  font-size: 26px;
+}
+
+.formpass {
+  font-size: 26px;
+}
+
+.botton1 {
+  color: white;
+  text-align: center;
+  width: 75px;
+  height: 40px;
+  border-radius: 5px;
+  background-color: #4682B4;
+}
+
+
+/*register.phpのcss*/
+.imp {
+  font-size: small;
+  color: red;
+  padding-left: 5px;
+}
+
+.botton2 {
+  color: white;
+  text-align: center;
+  width: 60px;
+  height: 40px;
+  border-radius: 5px;
+  background-color: #FF6666;
+}
