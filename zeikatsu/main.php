@@ -91,15 +91,15 @@ $pstmt15->execute(array($_SESSION['memberId']));
 $result15 = $pstmt15->fetchAll();
 
 //本日分の取り出し
-$pstmt16 = $pdo->prepare('SELECT * FROM s1612601_session WHERE  memberId=? AND day=NOW');
+$pstmt16 = $pdo->prepare('SELECT * FROM s1612601_session WHERE  memberId=? AND day=DATE(NOW())');
 $pstmt16->execute(array($_SESSION['memberId']));
 $result16 = $pstmt16->fetchAll();
 //1週間分の取り出し
-$pstmt17 = $pdo->prepare('SELECT * FROM s1612601_session WHERE  memberId=? AND day=8');
+$pstmt17 = $pdo->prepare('SELECT * FROM s1612601_session WHERE  memberId=? AND day BETWEEN (NOW() - iNTERVAL 1 WEEK) AND NOW()');
 $pstmt17->execute(array($_SESSION['memberId']));
 $result17 = $pstmt17->fetchAll();
 //1ヶ月分の取り出し
-$pstmt18 = $pdo->prepare('SELECT * FROM s1612601_session WHERE  memberId=? AND day=8');
+$pstmt18 = $pdo->prepare('SELECT * FROM s1612601_session WHERE  memberId=? AND day BETWEEN (NOW() - iNTERVAL 1 MONTH) AND NOW()');
 $pstmt18->execute(array($_SESSION['memberId']));
 $result18 = $pstmt18->fetchAll();
 
@@ -222,7 +222,7 @@ for( $i = 0 ; $i < count($result18) ; $i++ ){
   echo $todaysum."円<br>";
   echo '1週間の利用合計:';
   echo $weeksum."円<br>";
-  echo '1か月の利用合計:';
+  echo '1か月(30日前)の利用合計:';
   echo $monthsum."円<br>";
 
 
